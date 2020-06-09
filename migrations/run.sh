@@ -27,6 +27,6 @@ fi
 
 cd $MIGRATION;
 echo $MIGRATION;
-psql -U postgres -h $DBHOST -p 5432 --set dbname="$DBNAME" < run-migration.pgsql
+psql -U postgres -h $DBHOST -p 5432 --set dbname="$DBNAME" < run.pgsql
 wait
 

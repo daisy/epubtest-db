@@ -1,4 +1,4 @@
-\c epubtest;
+\c :dbname;
 
 create extension if not exists pgcrypto;
 

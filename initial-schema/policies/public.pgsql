@@ -1,4 +1,4 @@
-\c epubtest;
+\c :dbname;
 drop role if exists epubtest_public_role;
 create role epubtest_public_role;
 alter default privileges revoke execute on functions from epubtest_public_role;

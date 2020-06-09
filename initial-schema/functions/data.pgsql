@@ -1,4 +1,4 @@
-\c epubtest;
+\c :dbname;
 
 
 /*
@@ -21,7 +21,9 @@ declare
     v2arr int[];
 begin
     select into v1arr regexp_split_to_array(v1, E'\\.');
+    raise notice 'hi 1';
     select into v2arr regexp_split_to_array(v2, E'\\.');
+    raise notice 'hi 2';
     if v1arr[1] = v2arr[1] then
         if v1arr[2] = v2arr[2] then
             if ignorePatch then
@@ -132,7 +134,7 @@ begin
     loop
         this_topic := epubtest.get_topic_for_answerset(r."id");    
         this_version := epubtest.get_version_for_answerset(r."id");
-        raise notice 'hi % %', this_version, this_topic;
+        -- raise notice 'hi % %', this_version, this_topic;
         if this_topic = topic then
             -- if the version is less than anything else, it's not the latest
             if epubtest.compare_versions(version, this_version) = -1 then

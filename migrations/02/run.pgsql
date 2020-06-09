@@ -1,0 +1,1 @@
+\ir consolidate.pgsql

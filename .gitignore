@@ -1,12 +1,14 @@
 original-data/
 processed-data/
 sample-data/
-migrate/
+import/
 node_modules/
 
 sql/
-
-.env
+local/
+original-import-script/
+one-off-scripts/
+clone-db/.env
 
 customize.pgsql
 test.pgsql
@@ -19,3 +21,5 @@ package.json
 
 package-lock.json
 .DS_Store
+.env
+datascrub

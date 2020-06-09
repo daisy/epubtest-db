@@ -1,4 +1,4 @@
-\c epubtest;
+\c :dbname;
 
 drop role if exists epubtest_user_role;
 create role epubtest_user_role;

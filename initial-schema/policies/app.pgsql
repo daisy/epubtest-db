@@ -1,4 +1,4 @@
-\c epubtest;
+\c :dbname;
 
 drop role if exists epubtest_app_role;
 create role epubtest_app_role with LOGIN password :'appRolePassword';
@@ -6,7 +6,7 @@ create role epubtest_app_role with LOGIN password :'appRolePassword';
 grant usage on schema epubtest to epubtest_app_role;
 grant execute on all functions in schema epubtest to epubtest_app_role;
 grant select, update, insert, delete on all tables in schema epubtest to epubtest_app_role;
-grant all privileges on database epubtest to epubtest_app_role;
+grant all privileges on database :dbname to epubtest_app_role;
 grant all privileges on all tables in schema epubtest to epubtest_app_role;
 
 create policy epubtest_app_AnswerSets

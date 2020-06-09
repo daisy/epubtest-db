@@ -1,4 +1,4 @@
-\c epubtest;
+\c :dbname;
 set schema 'epubtest';
 
 -- get inactive users
@@ -77,11 +77,50 @@ begin
                 select distinct(epubtest."TestingEnvironments"."id") 
                 from epubtest."TestingEnvironments", epubtest."AnswerSets" 
                 where 
-                    epubtest."TestingEnvironments"."is_archived" = ''
+                    epubtest."TestingEnvironments"."is_archived" = 't'
                     and
                     epubtest."AnswerSets"."is_public" = 't' 
                     and 
                     epubtest."AnswerSets"."testing_environment_id" = epubtest."TestingEnvironments"."id" 
                     );
+end;
+$$ language plpgsql stable;
+
+-- get latest test books for language, ordered by topic order
+drop function if exists epubtest.get_latest_test_books;
+create or replace function epubtest.get_latest_test_books(
+    lang text default 'en'
+)
+returns table (
+    "id" integer,
+    "title" text,
+    "description" text,
+    "filename" text,
+    "lang_id" text,
+    "version" text,
+    "topic_id" text,
+    "order" integer
+) as $$
+declare
+begin
+    return query
+    select 
+        epubtest."TestBooks"."id",
+        epubtest."TestBooks"."title", 
+        epubtest."TestBooks"."description",
+        epubtest."TestBooks"."filename", 
+        epubtest."TestBooks"."lang_id",
+        epubtest."TestBooks"."version",
+        epubtest."TestBooks"."topic_id", 
+        epubtest."Topics"."order" 
+    from epubtest."TestBooks", epubtest."Topics"
+    where
+        epubtest."TestBooks"."lang_id" = lang
+        and
+        epubtest.is_latest_test_book(epubtest."TestBooks"."id")
+        and
+        epubtest."Topics"."id" = epubtest."TestBooks"."topic_id"
+    order by
+        epubtest."Topics"."order" asc;
 end;
 $$ language plpgsql stable;

@@ -14,9 +14,9 @@ Tables:
   * = RLS
 */
 
-create database epubtest;
+create database :dbname;
 
-\c epubtest;
+\c :dbname;
 
 create schema epubtest;
 

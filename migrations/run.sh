@@ -1,6 +1,6 @@
 #!/bin/bash
 # apply a migration to the database
-# run-migration.sh [dbname] [dbhost] [migration-folder]
+# run.sh [dbname] [dbhost] [migration-folder]
 
 if [ -z "$1" ];
 then

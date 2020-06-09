@@ -6,4 +6,4 @@ create table if not exists epubtest."DbInfo" (
 );
 grant select, update, insert, delete on epubtest."DbInfo" to epubtest_admin_role;
 
-insert into epubtest."DbInfo"("field", "value") values ('version', '04');
+insert into epubtest."DbInfo"("field", "value") values ('version', '03');

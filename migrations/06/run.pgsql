@@ -7,6 +7,7 @@
 \ir update-new-fields-for-existing-records.pgsql
 \ir grant-trigger-to-admin.pgsql
 \ir add-delete-test-book-and-answer-sets-function.pgsql
+\ir add-delete-all-data-function.pgsql
 update epubtest."DbInfo" set "value"='06' where "field"='version';
 
 

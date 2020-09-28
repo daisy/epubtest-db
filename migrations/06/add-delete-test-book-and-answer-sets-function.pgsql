@@ -23,11 +23,8 @@ begin
     delete from epubtest."Requests" where epubtest."Requests"."answer_set_id" in 
         (select epubtest."AnswerSets"."id" from epubtest."AnswerSets" 
         where epubtest."AnswerSets"."test_book_id"=delete_test_book_and_answer_sets.test_book_id);
-    raise notice 'deleting answer sets';
     delete from epubtest."AnswerSets" where epubtest."AnswerSets"."test_book_id"=delete_test_book_and_answer_sets.test_book_id;
-    raise notice 'deleting tests';
     delete from epubtest."Tests" where epubtest."Tests"."test_book_id"=delete_test_book_and_answer_sets.test_book_id;
-    raise notice 'deleting test book';
     delete from epubtest."TestBooks" where epubtest."TestBooks"."id"=delete_test_book_and_answer_sets.test_book_id;
 
     -- re-enable the triggers

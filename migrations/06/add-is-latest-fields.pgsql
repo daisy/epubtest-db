@@ -10,6 +10,7 @@ create or replace function update_answer_set_is_latest()
 returns trigger as $$
 declare
     begin
+        raise notice 'trigger update_answer_set_is_latest';
         update epubtest."AnswerSets" set 
             "is_latest" = (select epubtest.is_latest_answer_set("AnswerSets"."id", FALSE)),
             "is_latest_public" = (select epubtest.is_latest_answer_set("AnswerSets"."id", TRUE));

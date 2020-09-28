@@ -62,6 +62,5 @@ psql -U postgres -h localhost -p 5432 --set dbname="$DBNAME" < functions-fix.pgs
 wait
 
 echo "Cleaning up";
-rm -rf tmp;
 
 echo "Done cloning database locally";

@@ -9,6 +9,7 @@ returns trigger as $$
 declare
     n int;
     begin
+        raise notice 'trigger update_testing_environment_is_public';
         select count(*) into n from epubtest."AnswerSets" where 
             "AnswerSets"."testing_environment_id" = new."testing_environment_id"
             and

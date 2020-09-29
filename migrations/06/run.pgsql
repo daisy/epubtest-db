@@ -4,6 +4,7 @@
 \ir modify-is-latest-test-book-function.pgsql
 \ir add-is-public-field.pgsql
 \ir add-is-latest-fields.pgsql
+\ir add-run-answer-set-trigger-operations-function.pgsql
 \ir update-new-fields-for-existing-records.pgsql
 \ir grant-trigger-to-admin.pgsql
 \ir add-delete-test-book-and-answer-sets-function.pgsql

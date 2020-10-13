@@ -57,10 +57,9 @@ echo "Ingesting exported data";
 psql -U postgres -h localhost -p 5432 < tmp/$DBNAME.pgsql
 wait
 
-echo "Repairing function(s)";
-psql -U postgres -h localhost -p 5432 --set dbname="$DBNAME" < functions-fix.pgsql
-wait
-
-echo "Cleaning up";
+# not necessary since this particular function isn't in use anymore
+# echo "Repairing function(s)";
+# psql -U postgres -h localhost -p 5432 --set dbname="$DBNAME" < functions-fix.pgsql
+# wait
 
 echo "Done cloning database locally";

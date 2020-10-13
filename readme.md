@@ -4,6 +4,7 @@
 ## Useful scripts
 
 * `clone-db`: make a copy of the database from the server (connection details configured in `.env`)
+    * Note that this only works on localhost
 * `migrations`: apply a migration
 
 ## Tables

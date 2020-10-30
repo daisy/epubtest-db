@@ -23,6 +23,6 @@ INSERT INTO epubtest."Users"(
 )
 VALUES (
     new_id,
-    'Site Admin'
+    'Administrator'
 );
 end $$;

@@ -30,5 +30,9 @@ wait
 wait
 ./run.sh "$DBNAME" "$DBHOST" 09
 wait
+./run.sh "$DBNAME" "$DBHOST" 10
+wait
+./run.sh "$DBNAME" "$DBHOST" 11
+wait
 cd ../setup-testdb
 psql --set=dbname="$DBNAME" < add-admin.pgsql

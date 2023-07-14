@@ -1,6 +1,5 @@
 # this initializes a test database 
-# then you should run epubtest-site/test/add-data.js to populate it
-# and test queries
+# do this before running unit tests
 
 echo "Loading .env"
 source .env
@@ -35,6 +34,8 @@ wait
 ./run.sh "$DBNAME" "$DBHOST" 11
 wait
 ./run.sh "$DBNAME" "$DBHOST" 12
+wait
+./run.sh "$DBNAME" "$DBHOST" 13
 wait
 cd ../setup-testdb
 psql --set=dbname="$DBNAME" < add-admin.pgsql

@@ -1,0 +1,152 @@
+{
+  "title": "Fundamental Accessibility Tests: Non-Visual Reading",
+  "topicId": "non-visual-reading",
+  "description": "These tests are for evaluating the reading experience with an assistive technology tool such as a screen reader or refreshable Braille display. Tests include continuous reading, pause and resume, reading order, alternative text, table and hyperlink navigation, copying text.",
+  "langId": "en",
+  "epubId": "com.github.epub-testsuite.epub30-test-0302",
+  "version": "1.0.0",
+  "filename": "Fundamental-Accessibility-Tests-Non-Visual-Reading-v1.0.0",
+  "path": "/Users/marisa/dev/epubtest.org/one-off-scripts/extract-test-book-data/books/Fundamental-Accessibility-Tests-Non-Visual-Reading-v1.0.0",
+  "tests": [
+    {
+      "dbid": "reading-010",
+      "testId": "reading-010",
+      "xhtml": "<section id=\"reading-010\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-010</span> <span class=\"test-title\">Initiate \"read from here\"</span></h2>\n    <div class=\"desc\">\n      <p>Focus on the beginning of a paragraph or a sentence and initiate reading. Reading should continue until interrupted by the user or at the end of the current document, e.g. current chapter. </p>\n      <p>The text being read should preferably remain in view, but this is not a requirement to pass the test.</p>\n    </div>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 0,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Initiate \"read from here\"",
+      "description": "Focus on the beginning of a paragraph or a sentence and initiate reading. Reading should continue until interrupted by the user or at the end of the current document, e.g. current chapter. \n      The text being read should preferably remain in view, but this is not a requirement to pass the test."
+    },
+    {
+      "dbid": "reading-110",
+      "testId": "reading-110",
+      "xhtml": "<section id=\"reading-110\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-110</span> <span class=\"test-title\">Stop and resume reading at the same reading location</span></h2>\n    <div class=\"desc\">\n      <ol>\n        <li>Initiate reading from any point in the book. </li>\n        <li>Stop reading and note the last read position. </li>\n        <li>Initiate reading again and check if reading starts at the last read location. </li>\n      </ol>\n    </div>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 1,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Stop and resume reading at the same reading location",
+      "description": "Initiate reading from any point in the book. \n        Stop reading and note the last read position. \n        Initiate reading again and check if reading starts at the last read location."
+    },
+    {
+      "dbid": "reading-210",
+      "testId": "reading-210",
+      "xhtml": "<section id=\"reading-210\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-210</span> <span class=\"test-title\">All text should be read in the proper order</span></h2>\n    <div class=\"desc\">\n      <p>Sample text has been provided to test the reading order. The Paragraph 2 should be read after Paragraph 1. Note that visually Paragraph 2 is placed to the left of Paragraph 1 but it is second in the reading order. </p>\n    </div>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n    <section class=\"sample-text\">\n      <p class=\"sample\">\n        Paragraph 1: Mother's Day is a celebration honoring mothers and motherhood, maternal bonds, and the influence of mothers in society. It is celebrated on various days in many parts of the world, most commonly in the months of March or May. It\n        complements similar celebrations honoring family members, such as Father's Day and Siblings Day.\n      </p>\n      <p class=\"sidebartype\">\n        Paragraph 2: Mothers's Day in Israel: The Jewish population celebrates Mother's Day on Shevat 30 of the Jewish calendar, which falls between 30 January and 1 March. The celebration was set as the same date that Henrietta Szold died.\n      </p>\n    </section>\n  </section>",
+      "order": 2,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "All text should be read in the proper order",
+      "description": "Sample text has been provided to test the reading order. The Paragraph 2 should be read after Paragraph 1. Note that visually Paragraph 2 is placed to the left of Paragraph 1 but it is second in the reading order."
+    },
+    {
+      "dbid": "reading-310",
+      "testId": "reading-310",
+      "xhtml": "<section id=\"reading-310\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-310</span> <span class=\"test-title\">Image alternate text reading</span></h2>\n    <p><img src=\"../images/mobydick.jpg\" id=\"img267\" alt=\"Moby Dick with a sailor in his mouth and several with harpoons hanging on him and their ship in the background\"/></p>\n    <p class=\"desc\">Ensure that the alternate text for the image is available. </p>\n    <p class=\"eval\">If you can access the alternate text of the image above and are able to read it character by character as well as word by word then the test passes. The alternate text should read as \"Moby Dick with a sailor in his mouth and\n      several with harpoons hanging on him and their ship in the background.\"</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 3,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Image alternate text reading",
+      "description": "Ensure that the alternate text for the image is available."
+    },
+    {
+      "dbid": "reading-410",
+      "testId": "reading-410",
+      "xhtml": "<section id=\"reading-410\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-410</span> <span class=\"test-title\">Change reading speed</span></h2>\n    <p class=\"desc\">It should be possible to adjust (increase/decrease) the speed of reading. This test should be performed using the Assistive Technology being used for accessibility evaluation.</p>\n    <p>If you are testing with refreshable Braille, you should have the option of continuous reading, i.e. to auto-advance the refreshable Braille device. The reading system should also support adjustment of reading speed (refresh rate) of the\n      Braille device. </p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 4,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Change reading speed",
+      "description": "It should be possible to adjust (increase/decrease) the speed of reading. This test should be performed using the Assistive Technology being used for accessibility evaluation."
+    },
+    {
+      "dbid": "reading-510",
+      "testId": "reading-510",
+      "xhtml": "<section id=\"reading-510\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-510</span> <span class=\"test-title\">TTS allows pause for indicating headings, paragraphs, list items, etc</span></h2>\n    <p class=\"desc\">The user should be able to identify the difference between content items such as headings, paragraphs or list items by sufficient pauses in the TTS reading or appropriate formatting in the Braille device.</p>\n    <p>Read the text below using TTS and listen for the pauses.</p>\n    <h3>Text for testing TTS</h3>\n    <p>The above heading should not have run into this text as if it were one sentence. Now we have a regular sentence that includes a comma, so it should be spoken as two phrases. And a pause should have indicated that this is a separate sentence.\n    </p>\n    <p>This is a new paragraph. Below is a list, which should be read as three separate groups:</p>\n    <ul>\n      <li>Red, green, blue</li>\n      <li>One, two, three</li>\n      <li>Alpha, bravo, charlie</li>\n    </ul>\n    <p>End of text for testing TTS.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 5,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "TTS allows pause for indicating headings, paragraphs, list items, etc",
+      "description": "The user should be able to identify the difference between content items such as headings, paragraphs or list items by sufficient pauses in the TTS reading or appropriate formatting in the Braille device."
+    },
+    {
+      "dbid": "reading-610",
+      "testId": "reading-610",
+      "xhtml": "<section id=\"reading-610\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-610</span> <span class=\"test-title\">Navigate between the cells, rows and columns in the table</span></h2>\n    <p class=\"desc\">Check if you can navigate between the rows and columns of the table</p>\n    <p>Sample table is given below. </p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 6,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Navigate between the cells, rows and columns in the table",
+      "description": "Check if you can navigate between the rows and columns of the table"
+    },
+    {
+      "dbid": "reading-710",
+      "testId": "reading-710",
+      "xhtml": "<section id=\"reading-710\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-710</span> <span class=\"test-title\">Navigate between internal hyperlinks</span></h2>\n    <p class=\"desc\">Check if you can navigate between internal hyperlinks.</p>\n    <ol>\n      <li>Navigate to and select the internal hyperlink.</li>\n      <li>Verify that focus has moved to new location.</li>\n      <li>Navigate to and select the Back hyperlink.</li>\n      <li>Verify that focus is returned to original location. </li>\n    </ol>\n    <p class=\"eval\">If you can navigate from this paragraph to the link target by selecting <a href=\"supplement.xhtml#link-target-1\">this link</a>, and if the link on the destination page returns you to the paragraph below, then the test passes.</p>\n    <p id=\"link-target-1a\">You will be returned to this location by following the link back.</p>\n  </section>",
+      "order": 7,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Navigate between internal hyperlinks",
+      "description": "Check if you can navigate between internal hyperlinks."
+    },
+    {
+      "dbid": "reading-810",
+      "testId": "reading-810",
+      "xhtml": "<section id=\"reading-810\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-810</span> <span class=\"test-title\">Move to the next block item</span></h2>\n    <div class=\"desc\">\n      <p>Check if you can move to the next available page element e.g. paragraph, image or table by using a common key/gesture like swipe right, down arrow etc.</p>\n    </div>\n    <p>Sample text has been provided below to perform this test. If on using the \"next item\" gesture/command the focus moves to the next block element on this page e.g. paragraph, figures, footnote etc. then this test passes. </p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 8,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Move to the next block item",
+      "description": "Check if you can move to the next available page element e.g. paragraph, image or table by using a common key/gesture like swipe right, down arrow etc."
+    },
+    {
+      "dbid": "reading-910",
+      "testId": "reading-910",
+      "xhtml": "<section id=\"reading-910\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-910</span> <span class=\"test-title\">Navigate by characters</span></h2>\n    <p class=\"desc\">Check if it is possible to navigate to next and previous character in the book text by way of any command or gesture.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 9,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Navigate by characters",
+      "description": "Check if it is possible to navigate to next and previous character in the book text by way of any command or gesture."
+    },
+    {
+      "dbid": "reading-1010",
+      "testId": "reading-1010",
+      "xhtml": "<section id=\"reading-1010\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-1010</span> <span class=\"test-title\">Navigate by words</span></h2>\n    <p class=\"desc\">Check if it is possible to navigate to next and previous word in the book text by way of any command or gesture.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 10,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Navigate by words",
+      "description": "Check if it is possible to navigate to next and previous word in the book text by way of any command or gesture."
+    },
+    {
+      "dbid": "reading-1110",
+      "testId": "reading-1110",
+      "xhtml": "<section id=\"reading-1110\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-1110</span> <span class=\"test-title\">Navigate by lines</span></h2>\n    <p class=\"desc\">Check if it is possible to navigate to next and previous line in the book text by way of any command or gesture.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 11,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Navigate by lines",
+      "description": "Check if it is possible to navigate to next and previous line in the book text by way of any command or gesture."
+    },
+    {
+      "dbid": "reading-1210",
+      "testId": "reading-1210",
+      "xhtml": "<section id=\"reading-1210\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-1210</span> <span class=\"test-title\">Navigate the content by headings</span></h2>\n    <p class=\"desc\">Check if you can move to the next and previous headings in this book without using the Table of Contents.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 12,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Navigate the content by headings",
+      "description": "Check if you can move to the next and previous headings in this book without using the Table of Contents."
+    },
+    {
+      "dbid": "reading-1310",
+      "testId": "reading-1310",
+      "xhtml": "<section id=\"reading-1310\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">reading-1310</span> <span class=\"test-title\">Select and copy text</span></h2>\n    <p class=\"desc\">Reading systems should provide the ability to copy pieces of text that could be used for notes, in quotations, or to facilitate searching terms contained in the book. In some cases, this could be achieved using an AT such as a\n      screen reader, for instance with a dedicated cursor or other procedures. </p>\n    <p>Copy the text (399 characters) between the words \"Begin\" and \"End\" from the passage below. </p>\n    <p>Begin Consider the subtleness of the sea; how its most dreaded creatures glide under water, unapparent for the most part, and treacherously hidden beneath the loveliest tints of azure. Consider also the devilish brilliance and beauty of many\n      of its most remorseless tribes, as the dainty embellished shape of many species of sharks. Consider, once more, the universal cannibalism of the sea; all whose creatures prey upon each other, carrying on eternal war since the world began. </p>\n    <p>End</p>\n    <p>If the text can be accurately selected, copied and pasted into another application, then mark the test as passed. Explain the mechanism in a note to assist other users.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 13,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Select and copy text",
+      "description": "Reading systems should provide the ability to copy pieces of text that could be used for notes, in quotations, or to facilitate searching terms contained in the book. In some cases, this could be achieved using an AT such as a\n      screen reader, for instance with a dedicated cursor or other procedures."
+    }
+  ]
+}

@@ -24,3 +24,4 @@ package-lock.json
 .env
 datascrub
 clone-db/tmp
+migrations/14 maybe not/add-topic-id-to-answer-set.pgsql

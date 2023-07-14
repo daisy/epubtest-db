@@ -1,0 +1,92 @@
+{
+  "title": "Fundamental Accessibility Tests: Read Aloud",
+  "topicId": "read-aloud",
+  "description": "These tests include start, pause and resume Read Aloud, reading order, punctuation support and visual emphasis of the spoken text.",
+  "langId": "en",
+  "epubId": "com.github.epub-testsuite.epub30-test-0304",
+  "version": "1.0.0",
+  "filename": "Fundamental-Accessibility-Tests-Read-Aloud-v1.0.0",
+  "path": "/Users/marisa/dev/epubtest.org/one-off-scripts/extract-test-book-data/books/Fundamental-Accessibility-Tests-Read-Aloud-v1.0.0",
+  "tests": [
+    {
+      "dbid": "ReadAloud-010",
+      "testId": "ReadAloud-010",
+      "xhtml": "<section id=\"ReadAloud-010\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-010</span> <span class=\"test-title\">The content can be read aloud</span></h2>\n    <div class=\"desc\">\n      <p>Focus on the beginning of a paragraph or a sentence and initiate reading with text-to-speech using a feature of the reading system.</p>\n    </div>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 0,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "The content can be read aloud",
+      "description": "Focus on the beginning of a paragraph or a sentence and initiate reading with text-to-speech using a feature of the reading system."
+    },
+    {
+      "dbid": "ReadAloud-110",
+      "testId": "ReadAloud-110",
+      "xhtml": "<section id=\"ReadAloud-110\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-110</span> <span class=\"test-title\">Stop and resume reading</span></h2>\n    <div class=\"desc\">\n      <ol>\n        <li>Initiate reading from any point in the book. </li>\n        <li>Stop Read Aloud and note the last read position. </li>\n        <li>Initiate reading again using the Read Aloud feature and check if reading starts at the last read location. </li>\n      </ol>\n    </div>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 1,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Stop and resume reading",
+      "description": "Initiate reading from any point in the book. \n        Stop Read Aloud and note the last read position. \n        Initiate reading again using the Read Aloud feature and check if reading starts at the last read location."
+    },
+    {
+      "dbid": "ReadAloud-210",
+      "testId": "ReadAloud-210",
+      "xhtml": "<section id=\"ReadAloud-210\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-210</span> <span class=\"test-title\">The Read Aloud feature should continue until interrupted by the user</span></h2>\n    <div class=\"desc\">\n      <p>The Read Aloud feature should continue until interrupted by the user, keeping the text being spoken in view.</p>\n    </div>\n    <ol>\n      <li>Activate the Read Aloud feature.</li>\n      <li>The reading should continue across pages/screens until stopped manually.</li>\n      <li>The text being read aloud should be visible on the screen. </li>\n    </ol>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 2,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "The Read Aloud feature should continue until interrupted by the user",
+      "description": "The Read Aloud feature should continue until interrupted by the user, keeping the text being spoken in view."
+    },
+    {
+      "dbid": "ReadAloud-310",
+      "testId": "ReadAloud-310",
+      "xhtml": "<section id=\"ReadAloud-310\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-310</span> <span class=\"test-title\">All text should be read in the proper order</span></h2>\n    <div class=\"desc\">\n      <p>Sample text has been provided below to test the reading order. The Paragraph 2 should be read after Paragraph 1 by the Read Aloud feature. Note that visually Paragraph 2 is placed to the left of Paragraph 1 but it is second in the reading\n        order. </p>\n    </div>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n    <section class=\"sample-text\">\n      <p class=\"sample\">\n        Paragraph 1: Mother's Day is a celebration honoring mothers and motherhood, maternal bonds, and the influence of mothers in society. It is celebrated on various days in many parts of the world, most commonly in the months of March or May. It\n        complements similar celebrations honoring family members, such as Father's Day and Siblings Day.</p>\n      <p class=\"sidebartype\">\n        Paragraph 2: Mothers's Day in Israel: The Jewish population celebrates Mother's Day on Shevat 30 of the Jewish calendar, which falls between 30 January and 1 March. The celebration was set as the same date that Henrietta Szold died.\n      </p>\n    </section>\n  </section>",
+      "order": 3,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "All text should be read in the proper order",
+      "description": "Sample text has been provided below to test the reading order. The Paragraph 2 should be read after Paragraph 1 by the Read Aloud feature. Note that visually Paragraph 2 is placed to the left of Paragraph 1 but it is second in the reading\n        order."
+    },
+    {
+      "dbid": "ReadAloud-410",
+      "testId": "ReadAloud-410",
+      "xhtml": "<section id=\"ReadAloud-410\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-410</span> <span class=\"test-title\">Change Read Aloud reading speed</span></h2>\n    <p class=\"desc\">It should be possible to adjust (increase/decrease) the speed of reading. </p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 4,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Change Read Aloud reading speed",
+      "description": "It should be possible to adjust (increase/decrease) the speed of reading."
+    },
+    {
+      "dbid": "ReadAloud-510",
+      "testId": "ReadAloud-510",
+      "xhtml": "<section id=\"ReadAloud-510\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-510</span> <span class=\"test-title\">Text to Speech handles punctuation and document structure appropriately</span></h2>\n    <p class=\"desc\">When Read Aloud is activated, there should be slight pauses after headings, list items etc., rather than reading as if it is one continuous section of text.</p>\n    <p>Read the text below using read aloud and listen for the pauses.</p>\n    <h3>Text for testing read aloud</h3>\n    <p>The above heading should not have run into this text as if it were one sentence. Now we have a regular sentence that includes a comma, so it should be spoken as two phrases. And a pause should have indicated that this is a separate sentence.\n    </p>\n    <p>This is a new paragraph. Below is a list, which should be read as three separate groups:</p>\n    <ul>\n      <li>Red, green, blue</li>\n      <li>One, two, three</li>\n      <li>Alpha, bravo, charlie</li>\n    </ul>\n    <p>End of text for testing read aloud.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 5,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Text to Speech handles punctuation and document structure appropriately",
+      "description": "When Read Aloud is activated, there should be slight pauses after headings, list items etc., rather than reading as if it is one continuous section of text."
+    },
+    {
+      "dbid": "ReadAloud-610",
+      "testId": "ReadAloud-610",
+      "xhtml": "<section id=\"ReadAloud-610\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-610</span> <span class=\"test-title\">Text is emphasised as it is spoken by read aloud</span></h2>\n    <p class=\"desc\">Check if the Text is emphasised as it is spoken by read aloud.</p>\n    <ol>\n      <li>Activate the Read Aloud feature in the reading system. </li>\n      <li>When the Read Aloud is activated, the text being spoken should be emphasised visually using a contrasting colour or any other means. As the reading continues, the emphasis should also move to the next section of text to be read.</li>\n    </ol>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 6,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "Text is emphasised as it is spoken by read aloud",
+      "description": "Check if the Text is emphasised as it is spoken by read aloud."
+    },
+    {
+      "dbid": "ReadAloud-710",
+      "testId": "ReadAloud-710",
+      "xhtml": "<section id=\"ReadAloud-710\" class=\"test\" xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h2><span class=\"test-id\">ReadAloud-710</span> <span class=\"test-title\">The emphasis or highlight colour can be changed</span></h2>\n    <p class=\"desc\">Activate Read Aloud feature as described in the previous test. Change the colour of emphasis or visual highlight of the text being read aloud using any feature available in the reading system or the operating system. The users\n      should have a choice of different colours for text highlighting.</p>\n    <p class=\"eval\">Indicate Pass or Fail.</p>\n  </section>",
+      "order": 7,
+      "flagChanged": false,
+      "flagNew": false,
+      "name": "The emphasis or highlight colour can be changed",
+      "description": "Activate Read Aloud feature as described in the previous test. Change the colour of emphasis or visual highlight of the text being read aloud using any feature available in the reading system or the operating system. The users\n      should have a choice of different colours for text highlighting."
+    }
+  ]
+}

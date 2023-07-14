@@ -1,0 +1,1 @@
+export * as updateTestXhtml from './update-tests-xhtml.js';

@@ -16,10 +16,6 @@ update.pgsql
 run-update.sh
 import-data.sh
 /example.env
-
-package.json
-
-package-lock.json
 .DS_Store
 .env
 datascrub

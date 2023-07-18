@@ -23,8 +23,8 @@ async function main() {
         .action(async dataDir => {
             let resolvedDataDir = path.join(__dirname, dataDir);
             let dataFiles = await readDir(resolvedDataDir, '.json');
-
             for (let dataFile of dataFiles) {
+                console.log(`Importing ${dataFile}`);
                 await actions.updateTestXhtml.run(dataFile, jwt);
             }
         });

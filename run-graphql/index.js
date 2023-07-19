@@ -33,7 +33,8 @@ async function main() {
 
 async function readDir(dirpath, ext) {
     let rd = await fs.readdir(dirpath, {withFileTypes: true})
+    rd.map(f => console.log(f));
     return rd.filter(item => !item.isDirectory() && path.extname(item.name) == ext)
-        .map(item => item.path + '/' + item.name)
+        .map(item => path.join(dirpath, item.name))
 }
 (async() => main())()

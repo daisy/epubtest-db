@@ -1,4 +1,3 @@
-\c :dbname;
 drop role if exists epubtest_admin_role;
 create role epubtest_admin_role;
 

@@ -16,8 +16,12 @@ fi
 psql --set=dbname="$DB_NAME" --set=appRolePassword="$DB_PASSWORD" "host=$DB_HOST port=5432 user=postgres" < init-roles.pgsql
 wait
 
-# create the roles
+# create the db
 psql --set=dbname="$DB_NAME" --set=appRolePassword="$DB_PASSWORD" "host=$DB_HOST port=5432 user=postgres" < createdb.pgsql
+wait
+
+# setup the roles
+psql --set=dbname="$DB_NAME" --set=appRolePassword="$DB_PASSWORD" "host=$DB_HOST port=5432 user=postgres" < setup-roles.pgsql
 wait
 
 if [ -z "$1" ];

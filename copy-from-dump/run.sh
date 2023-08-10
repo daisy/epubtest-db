@@ -25,8 +25,12 @@ if [ -z "$1" ];
 then
     echo "Cannot import data, no file specified"
 else
+        mkdir tmp;
+        echo "Adding \\c $DBNAME to file";
+        echo -e "\\\c $DBNAME;\n$(cat $1)" > tmp/in.pgsql
+        wait
     # import the data
-    psql --set=dbname="$DB_NAME" "host=$DB_HOST port=5432 user=postgres" < $1
+    psql --set=dbname="$DB_NAME" "host=$DB_HOST port=5432 user=postgres" < tmp/in.pgsql
     wait
 fi
 

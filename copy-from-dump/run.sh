@@ -20,9 +20,6 @@ wait
 psql --set=dbname="$DB_NAME" --set=appRolePassword="$DB_PASSWORD" "host=$DB_HOST port=5432 user=postgres" < createdb.pgsql
 wait
 
-# setup the roles
-psql --set=dbname="$DB_NAME" --set=appRolePassword="$DB_PASSWORD" "host=$DB_HOST port=5432 user=postgres" < setup-roles.pgsql
-wait
 
 if [ -z "$1" ];
 then
@@ -32,5 +29,9 @@ else
     psql --set=dbname="$DB_NAME" "host=$DB_HOST port=5432 user=postgres" < $1
     wait
 fi
+
+# setup the roles (depends on a schema; created in the previous step)
+psql --set=dbname="$DB_NAME" --set=appRolePassword="$DB_PASSWORD" "host=$DB_HOST port=5432 user=postgres" < setup-roles.pgsql
+wait
 
 echo "Completed"

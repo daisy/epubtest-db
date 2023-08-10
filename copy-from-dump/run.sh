@@ -26,8 +26,8 @@ then
     echo "Cannot import data, no file specified"
 else
         mkdir tmp;
-        echo "Adding \\c $DBNAME to file";
-        echo -e "\\\c $DBNAME;\n$(cat $1)" > tmp/in.pgsql
+        echo "Adding \\c $DB_NAME to file";
+        echo -e "\\\c $DB_NAME;\n$(cat $1)" > tmp/in.pgsql
         wait
     # import the data
     psql --set=dbname="$DB_NAME" "host=$DB_HOST port=5432 user=postgres" < tmp/in.pgsql

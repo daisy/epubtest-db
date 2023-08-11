@@ -14,3 +14,8 @@ grant epubtest_user_role to epubtest_app_role;
 
 -- from initial-schema/policies/admin.pgsql
 grant epubtest_admin_role to epubtest_app_role;
+
+-- from migration #12
+grant epubtest_public_role to epubtest_readonly_role;
+grant epubtest_readonly_role to epubtest_app_role;
+grant epubtest_readonly_role to epubtest_admin_role;
